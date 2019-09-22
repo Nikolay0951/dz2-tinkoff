@@ -1,18 +1,8 @@
-console.log('worked')
-
 const regularPurchases = 3000;
-const increasedCashback = 7000;
-const specialOffers = 6000;
+const increasedCashback = 5000;
+const specialOffers = 7000;
 
-let primaryCashback;
-let totalCashback;
+const primaryCashback = (regularPurchases * 0.01) + (increasedCashback * 0.05) + (specialOffers * 0.3);
+const totalCashback = primaryCashback > 3000 ? 3000 : primaryCashback;
 
-primaryCashback = (regularPurchases * 0.01) + (increasedCashback * 0.05) + (specialOffers * 0.3);
-
-if (primaryCashback > 3000) {
-    totalCashback = 3000;
-} else {
-    totalCashback = primaryCashback;
-}
-
-console.log(totalCashback);
+console.log("Начислено бонусов: " +totalCashback);
